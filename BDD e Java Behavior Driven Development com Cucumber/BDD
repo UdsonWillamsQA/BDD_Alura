@@ -1,0 +1,27 @@
+BDD - Behaviour Driven Development
+
+Na essência é sobre colaboração, e melhorar a comunicação.
+Tenta aproximar o negócio e criar um entendimento melhor como a aplicação deveria funcionar
+
+É unir as equipes técnicas e não técnicas para definir os comportamentos necessários do software, e a partir dessas definições, desenvolver.
+
+Processo do BDD-
+
+Descobrir, formalizar, automatizar, validar.
+
+FORMALIZAR
+criterios de aceitação
+given-when-then / Dado-Quando-Então
+
+AUTOMATIZAR
+Cucumber
+Gerkin
+TDD
+
+VALIDAR
+junto ao PO, Do analista de negocios.
+Ajustar oque precisar ser ajustado.
+
+
+
+

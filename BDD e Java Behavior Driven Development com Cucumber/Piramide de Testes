@@ -1,0 +1,16 @@
+Testes são em niveis,
+
+na piramide o primeiro nivel são os testes de unidade
+testes de unidade se preocupam com o modelo, as regras de negocio.
+são faceis de escrever, rodam rapido. e devemos escrever mais testes de unidade do que qualquer outro teste.
+"pesquisar sobre dubles de teste"
+
+O Segundo nivel são os de integração, testes mais dificeis de escrever,
+e demoram mais para executar, eles testam uma camada do sistema junto com outra.
+
+O terceiro nivel é o end to end ou Ui,
+testa todo o sistema, desde o cliente, até o banco de dados, é mais caro, rodam mais devagar e são mais dificeis de fazer.
+É o teste que simula por meio de automação o comportamento de um usuario.
+
+fora da piramide existem os testes manuais, testes que não são automatizados.
+

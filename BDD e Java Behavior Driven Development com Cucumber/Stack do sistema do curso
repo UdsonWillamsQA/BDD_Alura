@@ -1,0 +1,5 @@
+stack - pilha - ou como a aplicação vai "funcionar"
+
+Primeiro vem o navegador no papel de cliente, ele se comunica com o servidor, que é o papel do nosso sistema, e depois o sistema se comunica com o banco de dados.
+Algo como NAVEGADOR > SISTEMA-LEILAO > BANCO DE DADOS
+

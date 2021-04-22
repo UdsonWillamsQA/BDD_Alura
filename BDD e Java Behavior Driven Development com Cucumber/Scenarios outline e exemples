@@ -1,0 +1,14 @@
+sao uma forma de voce por muitos "exemplos" para o cucumber fazer testes em um só cenario.
+Ex:.
+Esquema do Cenario: Propondo um lance invalido
+ Dado um lance invalido de <valor> reais e do usuario '<nomeUsuario>'
+ Quando propoe ao leilao
+ Entao o lance nao e aceito
+// note que nome de usuario está entre aspas simples, pois na linguagem do cucumber é assim que se informa que o exemplo é do tipo String
+ Exemplos:
+ 	   |  valor | nomeUsuario |
+ 	   | 	 0  | beltrano    |
+ 	   |  -1    | cigano      |
+
+
+Um scenario outline (ou Esquema do Cenario) roda para cada exemplo um novo test. Como temos dois exemplos, roda duas vezes.

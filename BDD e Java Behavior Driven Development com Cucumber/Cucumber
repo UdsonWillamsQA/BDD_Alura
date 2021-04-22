@@ -1,0 +1,56 @@
+Ideia do cucumber é escrever antes os criterios de aceitação, relacionado com uma funcionalidade, com auto nivel para ser entendido por todos e depois automatizalos de alguma forma.
+
+''' prestar atenção com a forma que se escreve. tem de ser igual no cucumber e na anotação na linguagem
+'''
+
+@RunWith(Cucumber.class)
+@CucumberOptions(features = "classpath:features") > anotações para vincular o cucumber ao junit
+vincula um arquivo mesmo de texto ao cucumber e ao junit.
+esse arquivo pode ter varios cenarios.
+
+os métodos possuem anotações como @Dado, @Quando e @Entao. Essas anotações informam ao Cucumber que esses métodos devem ser executados quando um passo com uma descrição que bata com o parâmetro passado para essas anotações for encontrado.
+
+Nos metodos do cucumber podem receber paramentros, que vao para o metodo na linguagem de programação, essa forma é chamada de Cucumber Expression
+
+DataTable uma forma de inicializar vários dados de uma vez só. diferente dos outlines e exemples aonde o teste roda o total de exemplos dados, aqui o teste roda uma unica vez mesmo que com muitos dados inicializados.
+Ex:.
+Cenario: Propondo uma sequencia de lances
+ Dado dois lances
+ 	   |   valor 	| nomeUsuario|
+ 	   |   10.0	| beltrano   |
+ 	   |   15.0	| beltrano   |
+ Quando propoe varios lances ao leilao
+ Entao o segundo lance não e aceito
+
+tags, ao por uma tag em um cenario, @exemplo, e ir na classe Runner do cucumber, voce pode adicionar essa tag dentro da anotação cucumberOptions para rodar apenas aquele teste.
+Ex:.
+@teste1
+Cenario: Propondo uma sequencia de lances
+ Dado dois lances
+ 	   |   valor 	| nomeUsuario|
+ 	   |   10.0	| beltrano   |
+ 	   |   15.0	| beltrano   |
+ Quando propoe varios lances ao leilao
+ Entao o segundo lance não e aceito
+
+@RunWith(Cucumber.class)
+@CucumberOptions(features = "classpath:features", tags = "@teste1")
+public class LeilaoCucumberRunner {}
+// faria com que apenas o teste1 fosse rodado.
+
+Contexto:
+Como um background, parecido com o @before, ele vai executar os passos antes de todos os cenarios.
+Ex:.
+
+FUncionalidade: cadastrando leilao
+Contexto:
+	 Dado dois lances
+ 	   |   valor 	| nomeUsuario|
+ 	   |   10.0	| beltrano   |
+ 	   |   15.0	| beltrano   |
+
+Cenario: Propondo uma sequencia de lances
+ Quando propoe varios lances ao leilao
+ Entao o segundo lance não e aceito
+//Logo o Dado seria executado nesse e em qualquer outro cenario abaixo.
+
